@@ -1,0 +1,11 @@
+name: 'Find TODOs'
+description: 'A simple GitHub action JS script to comment TODOs on PRs '
+inputs:
+  token:
+    description: 'GITHUB_TOKEN or a repo scoped PAT.'
+    default: ${{ github.token }}
+  pr:
+    description: 'The ID of the pull request'
+runs:
+  using: 'node16'
+  main: 'todo.js'
